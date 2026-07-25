@@ -1,0 +1,318 @@
+					Day 6 - 22nd July 2026(006CP2744)
+
+
+Task 1:
+Wap to display a simple lambda exp to display “welcome”
+
+import java.util.function.Supplier;
+
+public class Lambda{
+    
+    public static void main(String[] args){
+         Supplier<String> out = () -> "Welcome";
+         System.out.println(out.get());
+    }
+}
+
+
+
+Task 2:
+
+package org.example; in correct
+interface Prod{
+   int multiply(int a, int b);
+}
+public class Demo034_LambdaExp w{
+   public static void main(String[] args) {
+       Prod multiply = (a, b) -> a * b;
+
+       int result = Prod.multiply(10, 20);
+       System.out.println("prod is : " + result);
+   }
+}
+
+
+
+Tasks 3:
+
+Wap to create a calc using lambda exp
+
+
+@FunctionalInterface
+interface Calculator {
+    int calculate(int a, int b);
+}
+
+public class a2_LambdaCalculator {
+    public static void main(String[] args) {
+
+        Calculator add = (a, b) -> a + b;
+        Calculator sub = (a, b) -> a - b;
+        Calculator mul = (a, b) -> a * b;
+        Calculator div = (a, b) -> a / b;
+
+        int x = 20;
+        int y = 10;
+
+        System.out.println("Addition: " + add.calculate(x, y));
+        System.out.println("Subtraction: " + sub.calculate(x, y));
+        System.out.println("Multiplication: " + mul.calculate(x, y));
+        System.out.println("Division: " + div.calculate(x, y));
+    }
+}
+
+
+
+
+
+Task 4:
+
+You need to create an interface
+-> With one abstract method (SAM) and 1 normal method
+→ can you create  2 normal methods ?
+→ can i have a method with abstract keyword
+
+
+
+@FunctionalInterface
+interface Compute{
+    int multiply(int a, int b);
+    // or
+    abstract int multiply(int a, int b);
+    // or
+    public abstract int multiply(int a, int b);
+
+
+
+
+    default void display1(){
+        System.out.println("calculator");
+    }
+    default void display2(){
+        System.out.println("Calculating.....");
+    }
+    default void display3(){
+        System.out.println("Calculated");
+    }
+}
+
+
+public class a3_Interface{
+    public static void main(String[] args){
+        
+        Compute operation = (int a, int b) -> a*b;
+        operation.display1();
+        System.out.println(operation.multiply(10,10));
+        operation.display2();
+        operation.display3();
+
+
+        
+    }
+}
+
+
+
+
+Task 5:
+What is this code  snippet doing.. 
+Can i have a zero parameter lambda exp or not?
+
+package org.example;
+@FunctionalInterface
+interface  OParameter{
+   void display();
+}
+public class Demo036_LambdaExp3 {
+   public static void main(String[] args) {
+       OParameter obj = ()
+               -> System.out.println(
+               "This is a zero-parameter lambda expression!");
+       obj.display();
+   }
+}
+
+- The lambda is simply a shorter way of implementing the single abstract method of a functional interface.
+- This code creates a zero-parameter lambda expression that provides the implementation of the display().
+
+
+
+
+Task 6:
+Wap to create an array list
+Use lambda exp in foreach 
+Check if the num is even or odd
+
+import java.util.ArrayList;
+
+public class ArrayListLambdaDemo {
+    public static void main(String[] args) {
+
+        // Create an ArrayList
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        // Add elements
+        numbers.add(10);
+        numbers.add(15);
+        numbers.add(20);
+        numbers.add(25);
+        numbers.add(30);
+
+        // Use lambda expression with forEach
+        numbers.forEach(num -> {
+            if (num % 2 == 0) {
+                System.out.println(num + " is Even");
+            } else {
+                System.out.println(num + " is Odd");
+            }
+        });
+    }
+}
+
+
+
+Task 07:
+What is Junit 5?
+
+JUnit 5 is the latest major version of the JUnit framework, which is used to test Java programs. It helps developers verify that their code works correctly by writing unit tests.
+
+
+
+Task 08:
+List down the annotations of Junit 5
+
+Uses annotations such as:
+@Test – Marks a test method.
+@BeforeEach – Runs before every test.
+@AfterEach – Runs after every test.
+@BeforeAll – Runs once before all tests.
+@AfterAll – Runs once after all tests.
+
+
+
+
+Task 09:
+
+Difference between Junit 5 and Junit 4
+
+JUnit 4
+- Uses @Before and @After
+- Uses @BeforeClass and @AfterClass
+- Supports basic testing features
+- Does not support Java 8 features well
+
+JUnit 5
+- Uses @BeforeEach and @AfterEach
+- Uses @BeforeAll and @AfterAll
+- Supports advanced features like parameterized tests, nested tests, repeated tests, and dynamic tests.
+- Fully supports Java 8 and later features, including lambda expressions
+
+
+
+Task 10:
+What is junit Test Suite?
+
+A JUnit Test Suite is a collection of multiple test classes that are grouped together and executed as a single unit. Instead of running each test class separately.
+
+
+
+Task 11:
+What is Junit Vintage?
+
+JUnit Vintage is a test engine in JUnit 5 that allows you to run JUnit 3 and JUnit 4 test cases on the JUnit 5 Platform.
+
+
+
+Task 12:
+What are mock objects 
+
+Mock objects are fake or simulated objects used in unit testing to imitate the behavior of real objects. They allow you to test a class without depending on actual external.
+
+
+
+Task 13:
+Write about Mockito?
+
+Mockito is an open-source Java mocking framework used in unit testing. It allows developers to create mock objects for classes and interfaces so that code can be tested without relying on real dependencies such as databases.
+
+
+
+Task 14:
+Define Functional Interface a java 8 feature
+
+A Functional Interface is an interface that has only one abstract method, but it can have any number of default, static, or private methods.
+
+
+
+Task 15:
+What are default and static methods in interfaces?
+
+A default method is a method in an interface that has a body (implementation). Classes implementing the interface automatically inherit it, unless they choose to override it.
+
+A static method belongs to the interface itself, not to the implementing class.It is called using the interface name, not through an object.
+
+
+
+Task 16:
+In Java 8 stream API
+Given Code:
+
+
+package org.example;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+
+public class Demo039_streamApI {
+   public static void main(String[] args) {
+       List<String> list = new ArrayList<>();
+       list.add("Prasunamba");
+       list.add("Rama");
+       list.add("Seeta");
+       List<String> filtered = list.stream()
+               .filter(name -> name.startsWith("S"))
+               .collect(Collectors.toList());
+       System.out.println(filtered);
+   }
+}
+
+
+
+Task 17:
+What is Optional class in Java 8?
+
+The Optional class was introduced in Java 8 in the java.util package to represent a value that may or may not be present. It helps avoid NullPointerException by providing a safer way to handle null values.
+
+
+
+Task 18:
+What is error in the below Optional class – which is a feature of java 8?
+Given code:
+
+package org.example;
+
+import java.util.Optional;
+
+
+public class Demo040_Optional {
+   public static void main(String[] args) {
+       String user = "Prasunamba";
+       Optional.ofNullable(user).map(User::getName).orElse("Guest"); [1];
+   }
+}
+
+
+
+Task 19:
+What is the double colon :: operator ?
+
+- The double colon (::) operator is called the Method Reference Operator in Java 8.
+- It provides a shorter and cleaner way to refer to an existing method instead of writing a lambda expression.
+
+
+
+Task 20:
+What is method Reference in java 8?
+
+A Method Reference is a feature introduced in Java 8 that allows you to refer to an existing method or constructor using the :: (double colon) operator instead of writing a lambda expression.
