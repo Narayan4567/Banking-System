@@ -1,0 +1,191 @@
+(006CP2744): Day - 2 17/072026
+
+Links: 
+Data structures 👍
+https://drive.google.com/drive/folders/1iQhB9_bVyf10ZlGOARjFNO1D4rJsmOEy?usp=sharing
+
+
+
+
+Task 1:
+What is the default permission for a newly created file and a directory?
+11.05 to 11.08
+
+1. Newly Created File
+rw-r--r--
+666 - 022 = 644 (022)
+
+2. Newly Created Directory
+rwxr-xr-x
+777 - 022 = 755
+
+
+
+Task 2:
+Create a user using linux
+11.45 to 11.48
+
+Using useradd
+- sudo useradd -m ram
+- sudo passwd ram
+
+Useradd Prasunamba
+Or 
+Sudo adduser Prasunamba 
+
+
+
+Task 3:
+Delete the above user
+
+- sudo userdel john
+- sudo userdel -r john
+
+
+
+Task 4:
+Create another user 
+Change the password
+Create a third user and switch to 2nd user
+
+1. Create a second user
+- sudo useradd -m user2
+- sudo passwd user2
+2. Change the password of the second user
+- sudo passwd user2
+
+
+
+Task 5:
+Find your system’s current time.
+
+- date +"%T"
+
+
+
+Task 6:
+What is the chown command used for?
+
+1. Change the owner of a file
+sudo chown user2 file.txt
+
+2. Change the owner and group
+sudo chown user2:developers file.txt
+
+3. Change ownership recursively
+sudo chown -R user2:user2 myfolder
+
+Verify Ownership
+ls -l file.txt
+
+
+
+Task 7:
+What is grep used for ?
+
+The grep (Global Regular Expression Print) command in Linux is used to search for specific text or patterns in files or command output.
+
+
+
+Task 8:
+How to use Redirecting in linux?
+
+Redirection in Linux is used to send the output of a command to a file, take input from a file, or redirect error messages instead of displaying them on the terminal.
+
+
+
+Task 9:
+Try to open any file using vi command..
+
+The vi editor is a text editor in Linux used to create and edit files.
+
+
+
+
+task 10: Try to use hostname
+
+>>> hostname
+To insert text use i - insert
+Esc :wq – to exit
+
+
+Task 11:
+Try to use uname -a to display detailed system information including the kernel version.
+
+uname -a
+uname -r.....
+
+
+
+Task 12:
+Try to use Sudo command (write any command here )
+
+- sudo ls /root
+- sudo mkdir testfolder
+
+
+
+Task 13:
+What do you understand by HTTP and HTTPs?
+2.11 to 2.13
+
+
+HTTP(Hypertext Transfer Protocol): Its used to transfer the data from one place to the other which could be other country.
+
+- The data transfered using HTTP is not secure.
+
+HTTPs(Hypertext transfer protocol secure): It's also used to transfer the data from one place to other place.
+
+- The data which is transfered from HTTPs is secure.
+
+
+
+
+task 14: what are the methods in HTTP Protocol?
+
+\-Its the process of modifying the data.
+
+- GET
+
+- POST
+
+- UPDATE
+
+- DELETE
+
+- QUERY
+
+
+
+task 15: write the status code of http?
+
+Status code:
+
+- 100: Information
+
+- 200: Success
+
+- 300: Redirection
+
+- 400: Client Error
+
+- 500: Server Error
+
+
+
+task 16: What do understand by headers in http?
+
+\- Headers are the metadata which is sent along with the HTTP message.
+
+
+
+
+
+Linux Commands CMD:
+
+mkdir folder-name - Creating the folder
+echo Data(abcd) > file-name - Creating the file
+cd .. - previous folder
+cd\ - root Folder
+ls - Show all files in cmd
+dir - Show all files in powershell
