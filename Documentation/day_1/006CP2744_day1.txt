@@ -1,0 +1,105 @@
+(006CP2744): Day - 1 16/07/2026
+
+
+
+Task 1:
+What is Git?
+9.48 to 9.50
+
+Its a version control system which is used to store the files in an ordered manner, and can access previously saved files and folders with respect to the versions of the application.
+
+
+
+Task 2:
+What is Git Hub?
+9.51 to 9.53
+
+Its a cloud platform which is used to store the code folders and files inside the GitHub account and also GitHub can be used to deploy the code.
+
+
+
+Task 3:
+What is the difference between Git and Git Hub?
+9.54 to 9.59
+
+Git
+     - Git is a version control system which is used to access the previous versions of the saved repository.
+     - Git can e used to access old repository using Git.
+     - Git can be used to create Different branches.
+
+     GitHub
+     - GitHub is the cloud where all these folders and files of codes will be stores in the GitHub.
+     - GitHub helps to access that old codes which will be stored in the cloud.
+     - GitHub can be used to store that branches.
+
+
+
+
+Task 4:
+What is the staging area?
+2.21 to 2.25
+
+Its a memory allocated for the git when, we add the files into git it will first store those files into that area before storing it to the local repository.
+
+- we can make any changes to those codes which is stored in the staging area which will not store in the GitHub repository.
+
+- through this we make the GitHub repository look cleaner and avoid unnecessary mistakes in the repository.
+
+
+
+
+Task 5:
+What is vcs?
+2.26 to 2.30 to 2.34
+
+Its a system which will keep track of old version's of the codes, from which we can access the code of all previously pushed code.
+
+- This will helps to access the old code when the new push gets corrupted.
+
+
+
+
+Task 6:
+What do you understand by fork?
+3.59 to 4.03
+
+Its can be used in the GitHub to clone others repository into our own repository.
+
+- When we clone the repository from others account, they will get notify that.
+
+
+
+
+
+
+Commands in cmd:
+
+Create a linux demo directory in your folder using cmd…
+
+Change to the new directory using cmd..
+
+Create a file demo1.txt using echo command in cmd  
+
+List all the files in your directory using dir… cmd
+Go back to your previous directory — cd..
+
+Go back to your home directory – cd\
+
+
+
+Commands in power shell:
+
+Create a shell demo directory in your folder using cmd… 
+
+Change to the new directory using cmd..
+
+Create a file demo1.txt using echo command in cmd  
+Use cat command for reading…
+
+> and >> difference… 
+
+List all the files in your directory using dir… cmd
+Go back to your previous directory — cd..
+
+Go back to your home directory – cd\
+

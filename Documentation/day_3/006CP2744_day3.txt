@@ -1,0 +1,299 @@
+(006CP2744): Day 3 - 20th July 2026
+
+
+Task 1:
+What do you understand by Big 0 notation?
+11.34 to 11.37
+
+Big O notation is a way to describe how the time or memory required by an algorithm grows as the input size increases. It tells us the worst-case performance of an algorithm.
+
+
+
+Task 2:
+What are array ? how many types of Arrays ?
+11.38 to 11.42
+
+An array is a data structure that stores a collection of elements of the same data type in contiguous memory locations. Each element is accessed using its index, starting from 0.
+
+Types of Arrays:
+
+One-Dimensional (1D) Array – Stores elements in a single row.
+
+Two-Dimensional (2D) Array – Stores elements in rows and columns.
+
+Multidimensional Array – Arrays with three or more dimensions.
+
+
+
+Task 3:
+What do you understand about strings in java?
+11.43 to 11.46
+
+A String is an object in Java that represents a sequence of characters. It is used to store and manipulate text, such as names, messages, or sentences.
+
+
+
+Task 4:
+Create an array in java
+11.47 to 11.50
+
+public class ArrayExample {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30, 40, 50};
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+
+
+
+Task 5:
+Create a java pogram to print the String in reverse order.
+11.51 to 11.54
+
+
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "Hello";
+        
+        for (int i = str.length() - 1; i >= 0; i--) {
+            System.out.print(str.charAt(i));
+        }
+    }
+}
+
+
+
+
+Task 6:
+Wap to declare static and normal variables and increment the values of both..  What do you observe?
+11.55 to 12.00
+
+public class StaticDemo {
+    static int staticVar = 0;
+    int normalVar = 0;
+
+    void increment() {
+        staticVar++;
+        normalVar++;
+
+        System.out.println("Static Variable = " + staticVar);
+        System.out.println("Normal Variable = " + normalVar);
+    }
+
+    public static void main(String[] args) {
+        StaticDemo obj1 = new StaticDemo();
+        StaticDemo obj2 = new StaticDemo();
+
+        obj1.increment();
+        obj2.increment();
+    }
+}
+
+
+Task 7:
+Wap to print numbers from 100 to 10
+12.01 to 12.05
+
+public class PrintNumbers {
+    public static void main(String[] args) {
+        for (int i = 100; i >= 10; i--) {
+            System.out.println(i);
+        }
+    }
+}
+
+
+
+Task 8:
+
+Wap to accept logon id and pwd from the user and display welcome message if 
+Login id is “Prasunamba” pwd is “4321”
+Use while loop …
+
+import java.util.Scanner;
+
+public class Login {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String loginId;
+        String password;
+
+        while (true) {
+            System.out.print("Enter Login ID: ");
+            loginId = sc.next();
+
+            System.out.print("Enter Password: ");
+            password = sc.next();
+
+            if (loginId.equals("Prasunamba") && password.equals("4321")) {
+                System.out.println("Welcome!");
+                break;
+            } else {
+                System.out.println("Invalid Login ID or Password. Try Again.");
+            }
+        }
+
+        sc.close();
+    }
+}
+
+
+
+Task 9:
+
+Wap to accept login id and pwd from the user and display welcome message and then check for the login id and pwd ..
+Use do while loop..
+
+import java.util.Scanner;
+
+public class LoginDoWhile {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String loginId, password;
+
+        do {
+            System.out.print("Enter Login ID: ");
+            loginId = sc.next();
+
+            System.out.print("Enter Password: ");
+            password = sc.next();
+
+            if (loginId.equals("Prasunamba") && password.equals("4321")) {
+                System.out.println("Welcome!");
+            } else {
+                System.out.println("Invalid Login ID or Password. Try Again.");
+            }
+
+        } while (!loginId.equals("Prasunamba") || !password.equals("4321"));
+
+        sc.close();
+    }
+}
+
+
+
+Task 10:
+
+Wap to display the use of 
+If 
+Else if 
+Nested if
+
+public class IfDemo {
+    public static void main(String[] args) {
+        int age = 20;
+        int marks = 75;
+
+        // if
+        if (age >= 18)
+            System.out.println("Eligible to vote");
+
+        // else if
+        if (marks >= 90)
+            System.out.println("Grade A");
+        else if (marks >= 60)
+            System.out.println("Grade B");
+        else
+            System.out.println("Grade C");
+
+        // Nested if
+        if (age >= 18) {
+            if (marks >= 60)
+                System.out.println("Eligible for interview");
+        }
+    }
+}
+
+
+
+Task 11:
+
+Wap to display the use of switch case
+
+public class SwitchDemo {
+    public static void main(String[] args) {
+        int choice = 2;
+
+        switch (choice) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            default:
+                System.out.println("Invalid Choice");
+        }
+    }
+}
+
+
+
+Task 12:
+
+What are access modifiers in java … give detailed explanation?
+
+Access modifiers are keywords used to control the visibility of classes, methods, variables, and constructors. They help protect data and control how different parts of a program can access members.
+
+
+
+Task 13:
+Wap to accept cust names and display them using for each loop
+
+import java.util.Scanner;
+
+public class CustomerNames {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String[] names = new String[5];
+
+        System.out.println("Enter 5 customer names:");
+        for (int i = 0; i < names.length; i++) {
+            names[i] = sc.nextLine();
+        }
+
+        System.out.println("\nCustomer Names:");
+        for (String name : names) {
+            System.out.println(name);
+        }
+
+        sc.close();
+    }
+}
+
+
+
+Task 14:
+Wap to show the difference between break and continue. 
+Use for loop to show the diff
+
+public class BreakContinue {
+    public static void main(String[] args) {
+
+        System.out.println("Using break:");
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3)
+                break;
+            System.out.println(i);
+        }
+
+        System.out.println("\nUsing continue:");
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3)
+                continue;
+            System.out.println(i);
+        }
+    }
+}
+
+
+
