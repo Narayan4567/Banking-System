@@ -1,0 +1,413 @@
+					 Day 4 - 21st July 2026
+
+Task 1:
+Wap to display the functionality of method overloading
+
+class Calculator {
+
+    // Method with two integers
+    void add(int a, int b) {
+        System.out.println("Sum of two integers: " + (a + b));
+    }
+
+    // Method with three integers
+    void add(int a, int b, int c) {
+        System.out.println("Sum of three integers: " + (a + b + c));
+    }
+
+    // Method with two double values
+    void add(double a, double b) {
+        System.out.println("Sum of two doubles: " + (a + b));
+    }
+}
+
+public class MethodOverloadingDemo {
+    public static void main(String[] args) {
+
+        Calculator obj = new Calculator();
+
+        obj.add(10, 20);
+        obj.add(10, 20, 30);
+        obj.add(10.5, 20.5);
+    }
+}
+
+
+
+Task 2:
+Write a brief history of Java
+
+Java is Very popular language which is built to develop Software.
+- Its is Object Oriented Programming language.
+- Java Started at 1991.
+- Java is Originally called as Oak.
+- It is renamed as Java Because Oak was already trademarked.
+
+
+
+Task 2:
+Method overloading and Over Riding
+
+public class Polymorphism extends Child4{
+    public static void main(String[] args){
+        Polymorphism obj1 = new Polymorphism();
+
+        obj1.display(10, 20, 30);
+    }
+}
+
+
+class Child1{
+    int a = 10;
+    int b = 20;
+    void display(int a,int b){
+        System.out.println(a+""+b);
+    }
+}
+class Child2 extends Child1{
+    int a = 10;
+    int b = 20;
+    int c = 30;
+    void display(int a,int b,int c){
+        System.out.println(+a+""+b+""+c);
+    }
+}
+class Child3 extends Child2{
+    char a = 'a';
+    int b = 8;
+    void display(char a,char b){
+        System.out.println("Child 3: " +a+""+b);
+    }
+}
+class Child4 extends Child3{
+    char a = 'a';
+    int b = 8;
+    void display(char b,char a){
+        System.out.println("Child 4:" +b+""+a);
+    }
+}
+
+
+
+Task 3:
+LinkedList
+
+import java.util.LinkedList;
+
+public class LinkedListD{
+    public static void main(String[] args){
+        LinkedList<String> Names = new LinkedList<>();
+        Names.add("Riya");
+        Names.add("Priya");
+        Names.add("Seeta");
+        System.out.println(Names);
+        Names.remove("Riya");
+        System.out.println(Names);
+
+    }
+}
+
+
+
+Task4:
+CustomLinkedList
+
+public class CustomLinkedList{
+    public static void main(String[] args){
+        Node a1 = new Node(232);
+        Node a2 = new Node(348988);
+        a1.next = a2;
+        
+
+        System.out.println();
+        System.out.println(a1.data+"   "+a2.data);
+    }
+}
+
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+
+
+
+task5:
+stack using dequeue, arraydequeue
+
+import java.util.LinkedList;
+import java.util.Deque;
+import java.util.ArrayDeque;
+
+
+public class LinkedListStack{
+    public static void main(String[] args){
+
+        Deque<Integer> nums = new ArrayDeque<>();
+
+        Push(nums,10);
+        Push(nums,20);
+        Push(nums,30);
+
+
+        System.out.println(nums);
+
+        Pop(nums);
+        Pop(nums);
+        System.out.println(nums);
+
+
+        }
+        static void Push(Deque<Integer> nums, int a){
+            nums.push(a);
+        }
+        static void Pop(Deque<Integer> nums){
+            nums.pop();
+        }
+    }
+
+
+
+task6: use builtin queue and display the elements.
+
+import java.util.Queue;
+import java.util.ArrayDeque;
+
+public class Que{
+    public static void main(String[] args){
+        Queue<Integer> que = new ArrayDeque<>();
+
+
+        que.add(10);
+        que.add(20);
+        que.add(30);
+        System.out.println(que);
+    }
+}
+
+
+
+task7:
+wap to demonstrate method over riding.
+
+public class OverRiding{
+    public static void main(String[] args){
+
+        Child a1 = new Child();
+        
+        a1.display(10, 20);
+
+    }
+}
+
+
+class Parent{
+    int a;
+    int b;
+
+    void display(int a, int b){
+        System.out.println(a+" "+b);
+    }
+}
+
+class Child extends Parent{
+    int a;
+    int b;
+
+    void display(int a, int b){
+        System.out.println(a+b);
+}
+}
+
+
+
+task8:
+what are the advantages of polymorphism brief it.
+
+- Reusable Codes
+- Reduce Complexity
+- Easy to maintain the code
+- Organize the code Structure
+
+
+
+task 9:
+wap to show encapsulation feature in java use getters and setters.
+
+class Student {
+
+    // Private data members
+    private int id;
+    private String name;
+
+    // Setter methods
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter methods
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class EncapsulationDemo {
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        // Setting values using setters
+        s.setId(101);
+        s.setName("Narayana");
+
+        // Getting values using getters
+        System.out.println("Student ID: " + s.getId());
+        System.out.println("Student Name: " + s.getName());
+    }
+}
+
+
+
+task 10:
+what are the advantages and disadantages of encapsulation.
+
+Advantages:
+- Hiding the data
+- Better Security
+- Reduce Complexity
+
+ Disadvantages:
+- More Codes
+- Reduce Flexibility
+
+
+
+Task 11:
+Wap to use the concept of type casting:
+
+public class TypeCast{
+    public static void main(String[] args){
+        byte a = 10;
+        int b = a;
+        System.out.println(b);
+
+        // int c = 20;
+        // byte d = c;
+        // System.out.println(d);
+    }
+}
+
+
+
+Task 12:
+What is auto boxing and auto unboxing
+
+- Auto Boxing: It is automatic conversion of a primitive data type into it's corresponding wrapper class object.
+- Auto Unboxing: Automatic Conversion of a wrapper class object into its corresponding primitive data type.
+
+
+
+
+
+Home Task
+
+assessment1:
+wap to create a doubly linked list.
+
+
+// java ass_doubly.java
+
+
+public class Doubly{
+    public static void main(String[] args){
+
+        Node head = new Node(20);
+
+        head.next = new Node(10);
+        head.next.prev = head;
+
+        head.next.next = new Node(30);
+        head.next.next.prev = head.next;
+
+        head.next.next.next = new Node(40);
+        head.next.next.next.prev = head.next.next;
+
+
+
+        Node temp = head;
+
+        while(temp != null){
+            System.out.println(temp.data);
+            if(temp.next != null){
+                System.out.println("-");
+            }
+            temp = temp.next;
+
+
+        }
+
+    }
+}
+
+
+class Node{
+    int data;
+    Node prev;
+    Node next;
+
+    Node(int data){
+        this.data = data;
+        prev = next = null;
+    }
+}
+
+
+assessment2:
+wap to create a circular linked list.
+
+
+public class CircularLinkedList {
+    public static void main(String[] args) {
+
+        Node head = new Node(10);
+
+        head.next = new Node(20);
+        head.next.next = new Node(30);
+        head.next.next.next = new Node(40);
+
+        // Make it circular
+        head.next.next.next.next = head;
+
+        Node temp = head;
+
+        do {
+            System.out.println(temp.data);
+            temp = temp.next;
+        } while (temp != head);
+    }
+}
+
+
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        next = null;
+    }
+}
+
+
+
