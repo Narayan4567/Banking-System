@@ -1,0 +1,17 @@
+$kind: http-request
+name: http://localhost:8080/customers
+description: ""
+url: http://localhost:8080/customers
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\": 2,\r
+
+    \    \"accountType\": \"Fixed\"\r
+
+    }"
+order: 1785308818665

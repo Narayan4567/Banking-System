@@ -1,0 +1,339 @@
+(006CP2744): Day 10 - 29th July 2026
+
+
+
+
+Task 1:
+What is spring data JPA?
+
+
+Spring Data JPA is a Spring framework module that simplifies database operations in Java applications by reducing boilerplate code and automatically generating database queries using JPA and repository interfaces.
+
+- It allows developers to interact with databases using Java objects instead database queries using JPA and repository interfaces. It allows developers to interact with databases using Java objects instead of writing large amounts of SQL manually.
+
+
+
+
+
+Task 2:
+What are the key features of Spring data JPA?
+
+- Reduces boilerplate database code
+- Provides built-in CRUD operations
+- Automatically generates SQL queries
+- Supports custom query methods
+- Uses repository interfaces for database access
+- Integrates with JPA and Hibernate
+- Supports pagination and sorting
+- Supports transaction management
+- Provides support for relationships between entities
+- Converts Java objects into database tables using ORM
+- Easy integration with Spring Boot
+- Supports native SQL and JP queries
+
+
+
+
+
+Task 3:
+What are core components of Spring data JPA?
+
+- Entity
+- Java class mapped to a database table using @Entity
+- Repository
+- Interface used for database operations
+- JpaRepository
+- Predefined Spring Data JPA interface providing CRUD methods
+- JPA (Java Persistence API)
+- Specification for ORM and database interaction
+- Hibernate
+- Default JPA implementation that converts Java operations into SQL
+
+
+
+
+Task 4:
+Now create a spring application using initializer
+Create a customer entity with id and account type
+
+DemoApplication.java(main file)
+
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+
+}
+
+Customer.java
+
+package com.example.demo;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Customer {
+    @Id
+    private int id;
+    private String accountType;
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getAccountType() {
+        return accountType;
+    }
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+}
+
+
+
+
+
+Task 5:
+Add this interface to your above code
+package com.example.demo;
+import org.springframework.data.jpa.repository.JpaRepository;
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
+}
+In the same project can you create CustomerController.java file..
+Now Test with Postman or curl:
+POST → http://localhost:8080/customers
+And also check 
+Check H2 console:
+URL: http://localhost:8080/h2-console
+Observe the code and its working.. 
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-test</artifactId>
+   <scope>test</scope>
+</dependency>
+         <!-- Spring Boot Starter Web -->
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-web</artifactId>
+         </dependency>
+
+
+         <!-- Spring Data JPA -->
+         <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-data-jpa</artifactId>
+         </dependency>
+
+
+         <!-- H2 Database (in-memory for demo) -->
+         <dependency>
+             <groupId>com.h2database</groupId>
+             <artifactId>h2</artifactId>
+             <scope>runtime</scope>
+</dependency>
+
+Customer.java
+package com.example.demo;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+@Entity
+public class Customer {
+    @Id
+    private Integer id;
+    private String accountType;
+    // Add this default constructor
+    public Customer() {
+    }
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    public String getAccountType() {
+        return accountType;
+    }
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+}
+
+CustomerController.java
+package com.example.demo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+@RestController
+@RequestMapping("/customers")
+public class CustomerController {
+
+    @Autowired
+    private CustomerRepository repository;
+    @PostMapping
+    public Customer createCustomer(@RequestBody Customer customer) {
+        return repository.save(customer);
+    }
+    @GetMapping
+    public List<Customer> getAllCustomers() {
+        return repository.findAll();
+    }
+    @GetMapping("/{id}")
+    public Customer getCustomer(@PathVariable Integer id) {
+        return repository.findById(id).orElse(null);
+    }
+}
+
+CustomerRepository.java
+package com.example.demo;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+
+public interface CustomerRepository extends JpaRepository<Customer, Integer> {
+
+
+}
+
+DemoApplication.java (Main.java)
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+
+}
+
+
+application.properties.java
+#spring.application.name=demo
+##properties
+#spring.h2.console.enabled=true
+#spring.datasource.url=jdbc:h2:mem:testdb
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.datasource.username=sa
+#spring.datasource.password=
+#spring.jpa.show-sql=true
+#spring.jpa.hibernate.ddl-auto=update
+
+#properties
+# MySQL Database Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/m
+spring.datasource.username=root
+spring.datasource.password=sql@1234
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+# JPA/Hibernate Configuration
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+# Server Configuration
+server.port=8080
+
+
+
+
+Task 6:
+What is Application.proteries file is about?
+
+It stores application settings in key-value format, so developers can configure the application without changing Java code.
+
+
+
+
+Task 7:
+Why use application properties… uses?
+
+- Configure server settings
+- Connect databases
+- Configure Spring Security
+- Manage environment-specific settings
+- Store custom application values
+
+
+
+
+Task 8:
+What is application.yml?
+
+application.yml is a configuration file in Spring Boot, similar to application.properties.
+It is used to store application settings like Server port, Database configuration, Security settings, Logging configuration.
+
+
+
+
+Task 9:
+Why use/prefer to use  application.yml instead of application.properties?
+
+application.yml is often preferred over application.properties because it is more readable and better organized, especially for large Spring Boot applications.
+- Easier to read
+- Better structure with indentation
+- Supports hierarchical/nested configuration naturally
+
+
+
+
+
+Task 10:
+What is Eureka Server?
+
+Eureka Server is a service registry used in Spring Cloud microservices architecture.
+It helps microservices find and communicate with each other automatically.
+
+
+
+
+Task 11:
+Purpose of Eureka Server.
+
+- Registers all microservices
+- Keeps track of service locations
+- Registers all microservices
+- Keeps track of service locations
+- Helps services discover each other
+
+
+
+
+Activity time:
+Pick any scenario – other than banking..
+
+Team 1
+Actuator Basics - Health & Metrics Overview (deep dive in Application Observability course)
+Team 2
+Spring Security - Quick Integration Overview (deep dive in Application Security course)
+Team 3
+Thymeleaf
+Team 4
+Caching Integration Basics (Spring Cache Abstraction - full depth in Redis & Caching course)
+
+
+
+
+
+Home Task:
+
+Task 1:
+What do you know about Spring MVC framework?
+
+Spring MVC is a Java framework used to build web applications and REST APIs using the Model-View-Controller design pattern.
+It is part of the Spring Framework and helps separate application logic, user interface, and request handling in a clean and organized way.
+
+MVC stands for:
+- Model → Handles data and business logic
+- View → Displays data to the user
+- Controller → Handles HTTP requests and responses
+

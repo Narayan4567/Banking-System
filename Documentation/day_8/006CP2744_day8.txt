@@ -1,0 +1,35 @@
+(006CP2744): Day 8 - 27th July 2026
+
+
+
+Task 01:
+What do you understand by Spring frame work?
+
+It is a Framework, which manage java object creation, dependency injection, configuration and many enterprises application features allowing developer to focus on business logic.
+
+
+
+Task 02:
+What is spring boot?
+
+It provide the configured featured of spring framework already spring boot, which will helps to reduce the time consumption on configuring the all the required things and does that automatically and provide the auto configuration using @SpringBootApplication.
+
+
+
+Task 03:
+What is the diff b/w spring framework and spring boot?
+
+Spring Framework					Spring Boot
+- Core Java framework					- Built on top of Spring Framework
+- More manual configuration				- Automatic configuration where appropriate
+  Usually requires more setup				  Minimal setup
+- May use an external server				- Commonly includes an embedded Tomcat server
+- Flexible but more verbose				- Faster development
+- Suitable for all kinds of Spring applications		- Preferred for modern Spring applications
+
+
+
+Task 04:
+What is Dependency Injection?
+
+Dependency Injection (DI) is a design pattern in which an object receives the objects it depends on from an external source instead of creating them itself.
