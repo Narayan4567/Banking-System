@@ -1,0 +1,87 @@
+<div *ngIf="!isLoginPage()">
+  <div style="padding:20px">
+    <h1>Banking Application</h1>
+    <nav style="margin-bottom:20px; padding: 10px; background: lightgray;">
+      <a routerLink="/dashboard" routerLinkActive="active" style="margin-right: 15px;">Dashboard</a>
+      <a routerLink="/transaction" routerLinkActive="active" style="margin-right: 15px;">Transaction</a>
+      <a routerLink="/transfer" routerLinkActive="active" style="margin-right: 15px;">Transfer</a>
+      <!-- <button (click)="logout()" style="float: right;">Logout</button> -->
+    </nav>
+  </div>
+  <div class="transfer-container">
+    <h1>Transfer Funds</h1>
+    <!-- Balance Display -->
+    <div class="balance-card">
+      <h2>Available Balance</h2>
+      <p class="balance-amount">₹{{ balance }}</p>
+    </div>
+    <!-- Transfer Form -->
+    <div class="transfer-card">
+      <h3>Transfer Money</h3>
+      <div class="form-group">
+        <label>Account Number:</label>
+        <input 
+          type="text" 
+          [(ngModel)]="accountNumber" 
+          placeholder="Enter account number"
+          class="input-field">
+      </div>
+      <div class="form-group">
+        <label>Account Holder Name:</label>
+        <input 
+          type="text" 
+          [(ngModel)]="accountName" 
+          placeholder="Enter account holder name"
+          class="input-field">
+      </div>
+      <div class="form-group">
+        <label>Amount:</label>
+        <input 
+          type="number" 
+          [(ngModel)]="amount" 
+          placeholder="Enter amount"
+          class="input-field">
+      </div>
+      <div class="form-group">
+        <label>Description (Optional):</label>
+        <textarea 
+          [(ngModel)]="description" 
+          placeholder="Enter description"
+          class="input-field"
+          rows="3"></textarea>
+      </div>
+      <button (click)="transfer()" class="btn btn-primary">
+        Transfer
+      </button>
+    </div>
+    <!-- Transfer History -->
+    <div class="history-card">
+      <h3>Transfer History</h3>
+      <div *ngIf="transferHistory.length === 0" class="no-transactions">
+        No transfers yet
+      </div>
+      <table *ngIf="transferHistory.length > 0">
+        <thead>
+          <tr>
+            <th>Account Number</th>
+            <th>Account Name</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transfer of transferHistory">
+            <td>{{ transfer.accountNumber }}</td>
+            <td>{{ transfer.accountName }}</td>
+            <td>₹{{ transfer.amount }}</td>
+            <td>{{ transfer.description || '-' }}</td>
+            <td>{{ transfer.date | date:'short' }}</td>
+            <td>₹{{ transfer.balance }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

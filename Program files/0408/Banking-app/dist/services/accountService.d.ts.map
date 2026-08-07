@@ -1,0 +1,1 @@
+{"version":3,"file":"accountService.d.ts","sourceRoot":"","sources":["../../backend/src/services/accountService.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAIjD,wBAAgB,QAAQ,CAAC,OAAO,EAAE,OAAO,EAAC,MAAM,EAAE,MAAM,GAAG,IAAI,CAW9D;AAED,wBAAgB,OAAO,CAAC,OAAO,EAAE,OAAO,EAAC,MAAM,EAAE,MAAM,GAAG,IAAI,CAS7D"}

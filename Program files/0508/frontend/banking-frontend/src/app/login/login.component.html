@@ -1,0 +1,18 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Bank Login</h2>
+
+    <label>Email</label>
+    <input type="email" [(ngModel)]="email" placeholder="Enter email">
+    <br><br>
+    <label>Password</label>
+    <input type="password" [(ngModel)]="password" placeholder="Enter password">
+
+    @if (errorMessage) {
+      <div class="error-message">{{ errorMessage }}</div>
+    }
+
+    <button (click)="login()">Login</button>
+    <a routerLink="/register">Create Account</a>
+  </div>
+</div>

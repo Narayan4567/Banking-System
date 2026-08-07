@@ -1,0 +1,19 @@
+.account-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.account-btn:hover {
+  background: #1d4ed8;
+}
+.account-btn.secondary {
+  background: #e5e5e7eb;
+  color: #111827;
+}
+.account-btn.secondary:hover {
+  background: #d1d5db;
+}

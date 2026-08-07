@@ -1,0 +1,14 @@
+<div class="transaction-card">
+  <h3>Deposit Money</h3>
+  <div class="form-group">
+    <label>Amount:</label>
+    <input 
+      type="number" 
+      [(ngModel)]="depositAmount" 
+      placeholder="Enter amount"
+      class="input-field">
+  </div>
+  <button (click)="deposit()" class="btn btn-success">
+    Deposit
+  </button>
+</div>
