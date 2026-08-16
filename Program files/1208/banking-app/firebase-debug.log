@@ -1,0 +1,125 @@
+[debug] [2026-08-12T09:48:39.614Z] ----------------------------------------------------------------------
+[debug] [2026-08-12T09:48:39.616Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\NarayanaR\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-08-12T09:48:39.616Z] CLI Version:   15.26.0
+[debug] [2026-08-12T09:48:39.616Z] Platform:      win32
+[debug] [2026-08-12T09:48:39.616Z] Node Version:  v24.19.0
+[debug] [2026-08-12T09:48:39.616Z] Detected Agent: unknown
+[debug] [2026-08-12T09:48:39.617Z] Time:          Wed Aug 12 2026 15:18:39 GMT+0530 (India Standard Time)
+[debug] [2026-08-12T09:48:39.617Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-08-12T09:48:39.631Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\NarayanaR\OneDrive - IBM\Desktop\Java\Program files\1208\banking-app
+
+[debug] [2026-08-12T09:49:29.662Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-08-12T09:49:29.663Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-08-12T09:50:49.477Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-12T09:50:49.478Z] > authorizing via signed-in user (narayan71432@gmail.com)
+[debug] [2026-08-12T09:50:49.480Z] Checked if tokens are valid: false, expires at: 1786014623319
+[debug] [2026-08-12T09:50:49.480Z] Checked if tokens are valid: false, expires at: 1786014623319
+[debug] [2026-08-12T09:50:49.481Z] > refreshing access token with scopes: []
+[debug] [2026-08-12T09:50:49.483Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-08-12T09:50:49.483Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-08-12T09:50:50.198Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-08-12T09:50:50.198Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-08-12T09:50:50.279Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2026-08-12T09:50:51.659Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-08-12T09:50:51.659Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] 
+=== Hosting Setup
+[debug] [2026-08-12T09:51:41.055Z] Checked if tokens are valid: true, expires at: 1786531849199
+[debug] [2026-08-12T09:51:41.055Z] Checked if tokens are valid: true, expires at: 1786531849199
+[debug] [2026-08-12T09:51:41.055Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/adminuser-727db [none]
+[debug] [2026-08-12T09:51:41.671Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/adminuser-727db 200
+[debug] [2026-08-12T09:51:41.672Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/adminuser-727db {"projectId":"adminuser-727db","projectNumber":"996345541880","displayName":"adminuser","name":"projects/adminuser-727db","resources":{"hostingSite":"adminuser-727db"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_fb6679ad-8236-4ac7-b08d-01b8a875a0b9"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2026-08-12T09:53:04.556Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\NarayanaR\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:101:37)
+    at Interface.emit (node:events:509:28)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1327:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:284:20)
+    at ReadStream.emit (node:events:521:24)
+    at emitKeys (node:internal/readline/utils:371:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+    at ReadStream.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-08-12T09:53:08.331Z] ----------------------------------------------------------------------
+[debug] [2026-08-12T09:53:08.333Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\NarayanaR\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2026-08-12T09:53:08.333Z] CLI Version:   15.26.0
+[debug] [2026-08-12T09:53:08.333Z] Platform:      win32
+[debug] [2026-08-12T09:53:08.333Z] Node Version:  v24.19.0
+[debug] [2026-08-12T09:53:08.333Z] Detected Agent: unknown
+[debug] [2026-08-12T09:53:08.333Z] Time:          Wed Aug 12 2026 15:23:08 GMT+0530 (India Standard Time)
+[debug] [2026-08-12T09:53:08.333Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\NarayanaR\OneDrive - IBM\Desktop\Java\Program files\1208\banking-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-08-12T09:53:33.781Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-12T09:53:33.781Z] > authorizing via signed-in user (narayan71432@gmail.com)
+[debug] [2026-08-12T09:53:33.810Z] Checked if tokens are valid: true, expires at: 1786531849199
+[debug] [2026-08-12T09:53:33.811Z] Checked if tokens are valid: true, expires at: 1786531849199
+[debug] [2026-08-12T09:53:33.814Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/adminuser-727db [none]
+[debug] [2026-08-12T09:53:35.076Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/adminuser-727db 200
+[debug] [2026-08-12T09:53:35.076Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/adminuser-727db {"projectId":"adminuser-727db","projectNumber":"996345541880","displayName":"adminuser","name":"projects/adminuser-727db","resources":{"hostingSite":"adminuser-727db"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_fb6679ad-8236-4ac7-b08d-01b8a875a0b9"}
+[info] i  Using project adminuser-727db (adminuser) . 
+[info] 
+=== Hosting Setup
+[debug] [2026-08-12T09:54:03.064Z] Checked if tokens are valid: true, expires at: 1786531849199
+[debug] [2026-08-12T09:54:03.064Z] Checked if tokens are valid: true, expires at: 1786531849199
+[debug] [2026-08-12T09:54:03.064Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/adminuser-727db [none]
+[debug] [2026-08-12T09:54:04.140Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/adminuser-727db 200
+[debug] [2026-08-12T09:54:04.140Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/adminuser-727db {"projectId":"adminuser-727db","projectNumber":"996345541880","displayName":"adminuser","name":"projects/adminuser-727db","resources":{"hostingSite":"adminuser-727db"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_fb6679ad-8236-4ac7-b08d-01b8a875a0b9"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2026-08-12T09:54:46.347Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\NarayanaR\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:101:37)
+    at Interface.emit (node:events:509:28)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1327:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:284:20)
+    at ReadStream.emit (node:events:521:24)
+    at emitKeys (node:internal/readline/utils:371:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+    at ReadStream.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12)
+[error] 
+[error] Error: An unexpected error has occurred.
