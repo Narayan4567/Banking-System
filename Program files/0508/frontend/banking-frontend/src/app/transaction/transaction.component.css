@@ -1,0 +1,90 @@
+
+.history-card {
+  width: 60%;
+}
+
+
+.transaction-container {
+  padding: 30px;
+  background-color: #f4f6f9;
+ -height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.page-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.page-header h1 {
+  color: #1e3a8a;
+}
+.balance-section {
+  margin-bottom: 30px;
+}
+.balance-section {
+  margin-bottom: 30px;
+}
+.transaction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.card h2 {
+  margin-bottom:(0,0,0,0.08);
+}
+.card h2 {
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+.history-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.history-card h2 {
+  margin-bottom: 20px;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+.no-transactions {
+  text-align: center;
+  color: gray;
+  padding: 20px;
+}
+.table-wrapper {
+  overflow-x: auto;
+}
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.transaction-table th {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+.transaction-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+.deposit-row {
+  background-color: #ecfdf5;
+}
+.withdraw-row {
+  background-color: #fef2f2;
+}
+.transfer-row {
+  background-color: #eff6ff;
+}
+.transaction-table tr:hover {
+  background-color: #f3f4f6;
+}

@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "name": "Narayana R",
+      "email": "narayan@ibm.com",
+      "password": "1234",
+      "createdAt": "2026-08-06T09:16:28.376Z",
+      "id": "WM7uhkwSlLw"
+    },
+    {
+      "name": "Narayana R",
+      "email": "narayan@ibm.com",
+      "password": "1234",
+      "createdAt": "2026-08-06T09:16:29.696Z",
+      "id": "GIYOSY-IHuE"
+    },
+    {
+      "name": "Narayan",
+      "email": "n@gmail.com",
+      "password": "1234",
+      "createdAt": "2026-08-06T09:18:42.642Z",
+      "id": "hTGfEllYNO8"
+    },
+    {
+      "name": "Narayan",
+      "email": "n@gmail.com",
+      "password": "1234",
+      "createdAt": "2026-08-06T09:18:43.643Z",
+      "id": "ywHtDq1MJw0"
+    },
+    {
+      "name": "n",
+      "email": "n@gmail.com",
+      "password": "1234",
+      "createdAt": "2026-08-06T09:20:49.199Z",
+      "id": "jqHwiJz5Upg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

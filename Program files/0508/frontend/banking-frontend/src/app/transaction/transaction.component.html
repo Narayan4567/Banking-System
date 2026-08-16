@@ -1,0 +1,51 @@
+<div class="transaction-container">
+  <h1>Transaction Page</h1>
+  <!-- Balance Display -->
+  <app-balance [currentBalance]="balance"></app-balance>
+  <!-- Transaction Forms -->
+  <div class="transaction-grid">
+    <app-deposit (onDeposit)="handleDeposit($event)"></app-deposit>
+    <app-withdraw 
+      [currentBalance]="balance" 
+      (onWithdraw)="handleWithdraw($event)">
+    </app-withdraw>
+    <app-transfer (onTransfer)="handleTransfer($event)"></app-transfer>
+  </div>
+  <!-- Transaction History -->
+  <div class="history-card" style = "margin-top: -1000px;">
+    <h3>Transaction History</h3>
+    <div *ngIf="transactionHistory.length === 0" class="no-transactions">
+      No transactions yet
+    </div>
+    <table *ngIf="transactionHistory.length > 0" border = 1>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Details</th>
+          <th>Date</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactionHistory" 
+            [class.deposit-row]="transaction.type === 'Deposit'"
+            [class.withdraw-row]="transaction.type === 'Withdraw'"
+            [class.transfer-row]="transaction.type === 'Transfer'">
+          <td>{{ transaction.type }}</td>
+          <td>₹{{ transaction.amount }}</td>
+          <td>
+            <span *ngIf="transaction.type === 'Transfer'">
+              To: {{ transaction.accountName }} ({{ transaction.accountNumber }})
+              <br>
+              <small *ngIf="transaction.description">{{ transaction.description }}</small>
+            </span>
+            <span *ngIf="transaction.type !== 'Transfer'">-</span>
+          </td>
+          <td>{{ transaction.date | date:'short' }}</td>
+          <td>₹{{ transaction.balance }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

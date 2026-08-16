@@ -1,0 +1,14 @@
+<div class="transaction-card">
+  <h3>Withdraw Money</h3>
+  <div class="form-group">
+    <label>Amount:</label>
+    <input 
+      type="number" 
+      [(ngModel)]="withdrawAmount" 
+      placeholder="Enter amount"
+      class="input-field">
+  </div>
+  <button (click)="withdraw()" class="btn btn-danger">
+    Withdraw
+  </button>
+</div>

@@ -1,0 +1,122 @@
+a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+a.active {
+  background: blue;
+  color: white;
+}
+button {
+  padding: 8px 15px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background: darkred;
+}
+.transfer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+.balance-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.balance-amount {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.transfer-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.input-field:focus {
+  outline: none;
+  border-color: #667eea;
+}
+textarea.input-field {
+  resize: vertical;
+  font-family: Arial, sans-serif;
+}
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-primary {
+  background-color: #667eea;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #5568d3;
+}
+.history-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.no-transactions {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-style: italic;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+thead {
+  background-color: #667eea;
+  color: white;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+tbody tr:hover {
+  background-color: #f1f1f1;
+}

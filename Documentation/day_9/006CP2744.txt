@@ -1,0 +1,650 @@
+(006CP2744): Day 9 - 28th July 2026
+
+
+
+Task 1:
+Can you create a Maven based spring project using ide.. To print a welcome..note
+
+Welcome.java
+
+package org.example;
+
+public class a1_Welcome {
+
+    public void display() {
+        System.out.println("Welcome to Spring Framework!");
+    }
+}
+
+App.java
+
+package org.example;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+
+    public static void main(String[] args) {
+
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        a1_Welcome welcome =
+                context.getBean("welcomeBean", a1_Welcome.class);
+
+        welcome.display();
+
+    }
+}
+
+applicationContext.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="welcomeBean"
+          class="org.example.a1_Welcome"/>
+
+</beans>
+
+
+
+
+Task 2:
+Now create a POJO class for student so that can be managed as  a spring bean
+
+Student.java
+
+package org.example;
+
+public class Student {
+
+    private int id;
+    private String name;
+    private String course;
+
+    public Student() {
+        System.out.println("Student Bean Created");
+    }
+
+    // Getters and Setters
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public void display() {
+        System.out.println("Student ID : " + id);
+        System.out.println("Student Name : " + name);
+        System.out.println("Course : " + course);
+    }
+}
+
+App.java
+
+package org.example;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+
+    public static void main(String[] args) {
+
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        Student student = context.getBean("studentBean", Student.class);
+
+        student.display();
+    }
+}
+
+
+
+
+applicationContext.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="studentBean"
+          class="org.example.Student">
+    
+
+        <property name="id" value="101"/>
+        <property name="name" value="Narayana"/>
+        <property name="course" value="Spring Framework"/>
+
+    </bean>
+
+</beans>
+
+
+what are serlets and applets, Jenkins, GitHub action.
+
+
+
+
+
+Task 3:
+Configure the above Student bean in the bean-factory-demo.xml file.
+That means you need to configure the Student bean in the XML file so the BeanFactory knows how to create it.
+And create a main class and run it.. A pictorial rep of the scenario is given below
+
+Student.java
+
+package org.example;
+
+public class Student {
+
+    private int id;
+    private String name;
+    private String course;
+
+    public Student() {
+        System.out.println("Student Bean Created");
+    }
+
+    // Getters and Setters
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public void display() {
+        System.out.println("Student ID : " + id);
+        System.out.println("Student Name : " + name);
+        System.out.println("Course : " + course);
+    }
+}
+
+
+App.java
+
+package org.example;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+
+    public static void main(String[] args) {
+
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        Student student = context.getBean("studentBean", Student.class);
+
+        student.display();
+    }
+}
+
+applicationContext.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="studentBean"
+          class="org.example.Student">
+
+
+        <property name="id" value="101"/>
+        <property name="name" value="Narayana"/>
+        <property name="course" value="Spring Framework"/>
+
+    </bean>
+
+</beans>
+
+
+
+
+Task 4:
+Can you explain application context with the syntax..
+
+Application context most commonly refers to the Spring Framework’s ApplicationContext. It is a container that manages your application’s objects (called beans), their creation, configuration, and dependencies.
+
+Syntax: ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+
+
+
+Task 5:
+Why use application context .. plz list some uses?
+
+- ApplicationContext in Spring is used to manage and control objects in an application.
+- Bean creation
+- Dependency Injection (DI)
+- Centralized object management
+
+ 
+
+
+Task 6:
+What are features of Spring Framework .. list them with 1 or 2 lines explanation?
+
+- Lightweight
+- Dependency Injection (DI)
+- Inversion of Control (IoC)
+- Aspect-Oriented Programming (AOP)
+- Transaction Management
+- Bean Management
+- Loose Coupling
+
+
+
+
+Task 7:
+Why do you think we use spring framework.. Advantages list them down?
+
+- Reduces Boilerplate Code
+- Loose Coupling
+- Dependency Injection (DI)
+- Easy Database Integration
+- Better Code Organization
+
+
+
+
+Task 8:
+What do you understand by IOC? Explain with diagram..
+
+It is a principle where the control of object creation and dependency management is transferred from the programmer to the Spring container.
+- Programmer creates objects manually using new.
+- Spring creates objects (beans)
+- injects dependencies
+
+
+
+Task 9:
+How many types of IOC do you have in spring?
+What are they with explanation
+
+In Spring, IoC (Inversion of Control) is mainly achieved through Dependency Injection (DI).
+There are two main types of IoC (Dependency Injection) in Spring.
+- Setter Injection
+- Constructor Injection
+
+
+
+
+Task 10:
+What is DI in spring?
+
+In Spring, Dependency Injection is a process where Spring automatically provides the required objects (dependencies) to a class instead of the class creating them manually.
+- an object that another object needs to work.
+
+
+
+
+Task 11:
+How many types of DI do we have?Explain
+
+- Constructor Injection: In constructor injection, dependencies are provided through the constructor at the time the object is created.
+- Setter Injection: In Setter Injection, Spring injects dependency into an object using setter methods after the object is created.
+- Field Injection (DI): In Field Injection, Spring injects dependency directly into class fields using @Autowired.
+
+
+
+
+Task 12:
+What is Spring Application Configuration?
+
+Spring Application Configuration is the process of defining, beans (objects), dependencies, database settings, application settings, application settings that Spring uses to create and manage the application.
+
+
+
+
+Task 13:
+What are the different ways to configure spring applications?
+
+Spring Framework provides multiple ways to configure applications. Configuration in Spring means defining beans, dependencies, and application settings that are managed by the Spring container.
+The three main ways to configure Spring applications are:
+- XML-Based Configuration
+- Annotation-Based Configuration
+- Java-Based Configuration
+
+
+Task 14:
+Why we need spring application configuration?
+
+Spring Application Configuration is required to define and manage the objects (beans), dependencies, and settings used in a Spring application. It provides instructions to the Spring container about how the application components should be created, connected, and managed.
+
+
+
+Task 15:
+What are the different ways to configure spring application? Same as 13th
+
+The different ways to configure Spring applications are:
+- XML-Based Configuration
+- Annotation-Based Configuration
+- Java-Based Configuration
+- XML-Based Configuration
+
+
+
+
+Task 16:
+What is bean scope .. give different scopes with description
+
+Bean scope in Spring defines the lifecycle and visibility of a bean within the Spring container. It specifies how many objects of a bean will be created and how those objects will be shared in the application.
+
+In simple terms, bean scope determines:
+- Singleton Scope
+- Prototype Scope
+- Request Scope
+- Session Scope
+- Application Scope
+- WebSocket Scope
+
+
+
+
+Task 17:
+What is autowiring in spring?
+
+Autowiring in Spring is a feature used to automatically inject dependencies into a bean without manually configuring them in XML or Java code.
+
+
+
+
+Task 18:
+What are diff ways of autowiring?
+
+Autowiring in Spring is the process of automatically injecting dependencies into a bean by the Spring container. Spring provides multiple ways to perform autowiring.
+The different ways of autowiring in Spring are:
+- Autowiring by Name
+- Autowiring by Type
+- Autowiring by Constructor
+- Autodetect Autowiring (Deprecated)
+- Annotation-Based Autowiring
+
+
+
+
+Task 19:
+What is diff between a normal java object and Spring bean?
+
+	Normal Java Object					Spring Bean
+Created using new keyword.			Created and managed by the Spring IoC Container.
+You manage its lifecycle.			Spring manages its lifecycle.
+Dependencies are created manually.		Dependencies are injected automatically (Dependency Injection).
+No container support.				Gets Spring features like DI, AOP, Transactions, etc.
+Exists only where you create it.		Stored inside the Spring container and can be reused.
+
+
+
+Task 20:
+What is diff between @ component and @ bean
+
+- @Component is used on a class to tell Spring that the class should be automatically detected and managed as a bean.
+- @Bean is used on a method inside a configuration class to manually create and configure a bean.
+
+
+
+Task 21:
+A different way to create an application using
+https://start.spring.io/ try it .. and let me know what is it?
+
+Spring Initializr (`/`) is an online tool provided by Spring to quickly create and configure a Spring Boot project.
+It auto-generates a ready-made Spring Boot application structure with:
+- dependencies
+- build configuration
+- starter files
+- project structure with:
+- dependencies
+
+
+
+
+Task 22:
+Using Spring initialiser create  an employee class , appcofig file, and main class and see how it works
+Note: In real applications, Spring Boot creates it automatically using SpringApplication.run()
+
+
+
+
+
+
+
+Task 23:
+We have spring annotations:
+Like
+@bean
+@controller 
+@value 
+@conponentScan 
+@configuration 
+@service 
+@repository      
+@Qualifier 
+@required
+@component
+@autowired 
+@scope
+Can you give a liner about these
+
+
+1.@Bean
+Used in a configuration class to manually define and create a bean that will be managed by Spring.
+
+2.@Controller
+Marks a class as a Spring MVC controller that handles web requests and returns views.
+
+3.@Value
+Injects values from properties files or environment variables into fields.
+
+4.@ComponentScan
+Tells Spring to scan specified packages for components, services, repositories, and controllers.
+
+5.@Configuration
+Indicates that a class contains bean definitions and Spring configuration.
+
+6.@Service
+Marks a class as a service layer component that contains business logic.
+
+7.@Repository
+Marks a class as a Data Access Object (DAO) that interacts with the database.
+8.@Qualifier
+Used with @Autowired to specify which bean should be injected when multiple beans of the same type exist.
+
+9.@Required
+Marks a setter method as mandatory, ensuring the dependency must be injected (deprecated in Spring 5).
+
+10.@Component
+Marks a class as a Spring-managed component, making it a candidate for auto-detection during component scanning.
+
+11.@Autowired
+Automatically injects dependencies into a class by type.
+
+12.@Scope
+Defines the scope of a bean such as singleton, prototype, request, or session.
+
+
+
+
+
+Task 24:
+What are the features of springboot?
+
+- Auto-Configuration
+- Embedded Servers
+- Spring Boot Starter Dependencies
+- Production-Ready Features
+- Spring Boot CLI
+- No XML Configuration
+
+
+
+
+Task 25:
+What are the advantages of Spring boot?
+
+1.Auto-Configuration
+Automatically configures application components based on dependencies, reducing manual configuration effort.
+
+2.Embedded Servers
+Includes embedded servers like Tomcat, Jetty, and Undertow, eliminating the need for external server deployment.
+
+3.Starter Dependencies
+Provides pre-configured starter dependencies that simplify dependency management and reduce version conflicts.
+
+4.Production-Ready Features
+Offers built-in monitoring, health checks, and metrics through Spring Boot Actuator for production environments.
+
+
+
+
+Task 26:
+What are the key components of Spring boot?
+
+1.Spring Boot Starters
+Pre-configured dependency descriptors that simplify dependency management and provide compatible library versions for common use cases like web, JPA, and security.
+
+2.Spring Boot Auto-Configuration
+Automatically configures application components based on classpath dependencies, eliminating manual configuration and reducing boilerplate code.
+
+3.Spring Boot Actuator
+Provides production-ready features such as health checks, metrics, monitoring, and application management endpoints for operational visibility.
+
+4.Embedded Servers
+Includes built-in servers like Tomcat, Jetty, and Undertow, allowing applications to run as standalone JAR files without external server deployment.
+
+
+
+
+Task 27:
+Why spring boot over spring?
+
+Spring Boot is built on top of the Spring Framework and provides additional features that simplify and accelerate application development. While Spring Framework is powerful, Spring Boot makes it easier to use by reducing configuration and setup time.
+
+
+
+
+Task 28:
+Can you explain the internal working of spring boot?
+
+Spring Boot simplifies Spring application development by automating configuration and providing sensible defaults. Understanding its internal working helps developers appreciate how Spring Boot manages beans, dependencies, and application lifecycle.
+
+
+
+
+Task 29:
+List out the starter dependencies for spring boot
+
+1.spring-boot-starter-web
+Starter for building web applications and RESTful services using Spring MVC with embedded Tomcat server.
+
+2.spring-boot-starter-data-jpa
+Starter for using Spring Data JPA with Hibernate for database operations and ORM functionality.
+
+3.spring-boot-starter-security
+Starter for implementing authentication and authorization using Spring Security framework.
+
+4.spring-boot-starter-test
+Starter for testing Spring Boot applications with JUnit, Mockito, and Spring Test libraries.
+
+
+
+
+Task 30:
+import org.springframework.boot.SpringApplication; 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+@SpringBootApplication
+public class MyApplication 
+{ 
+  public static void main(String[] args) {
+    SpringApplication.run(MyApplication.class, args);
+  }
+}
+ In this above code ..
+What is the internal working of above code .. 
+Give thhe step by step explanation 
+
+
+1.@SpringBootApplication Annotation
+Combines @Configuration, @EnableAutoConfiguration, and @ComponentScan to enable auto-configuration and component scanning.
+
+2.SpringApplication.run() Execution
+Creates SpringApplication instance, loads configuration files, and initializes Spring IoC container.
+
+3.Auto-Configuration
+Reads META-INF/spring.factories, loads auto-configuration classes, and configures beans based on classpath dependencies.
+
+4.Component Scanning
+Scans current package for @Component, @Service, @Repository, @Controller and registers them as beans.
+
+
+
+
+
+Task 31:
+What is the syntax to change the port of the embedded Tomcat server in Spring Boot?
+
+
+Using application.yml
+server:
+  port: 9090
+
+Using Command Line
+java -jar myapp.jar --server.port=9090
+
+
+
