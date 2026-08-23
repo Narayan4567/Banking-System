@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f968e54a-ffbf-4946-be2e-b5dc82ee37de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/java/com/banking/bankingapp/BankingAppApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/java/com/banking/bankingapp/controller/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/java/com/banking/bankingapp/entity/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/java/com/banking/bankingapp/repository/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/java/com/banking/bankingapp/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_1/006CP2744_day1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_10/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_11/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_12/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_13/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_14/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_15/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_16/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_17/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_18/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_19/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_2/006CP2744_day2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_20/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_21/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_22/006CP2744.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_3/006CP2744_day3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_4/006CP2744_day4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_5/006CP2744_day5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_6/006CP2744_day6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_7/006CP2744_day7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_8/006CP2744_day8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_9/006CP2744.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../t1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../t2.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3IDHEYhcZKLtYqfZIOjAEJVFcRT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/NarayanaR/OneDrive - IBM/Desktop/Java/Program files/2108/MicroServices",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f968e54a-ffbf-4946-be2e-b5dc82ee37de" name="Changes" comment="" />
+      <created>1787292107860</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1787292107860</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
