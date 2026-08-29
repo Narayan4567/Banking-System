@@ -5,36 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f968e54a-ffbf-4946-be2e-b5dc82ee37de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/java/com/banking/bankingapp/BankingAppApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/java/com/banking/bankingapp/controller/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/java/com/banking/bankingapp/entity/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/java/com/banking/bankingapp/repository/AccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/java/com/banking/bankingapp/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1808/banking-app/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_1/006CP2744_day1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_10/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_11/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_12/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_13/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_14/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_15/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_16/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_17/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_18/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_19/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_2/006CP2744_day2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_20/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_21/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_22/006CP2744.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_3/006CP2744_day3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_4/006CP2744_day4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_5/006CP2744_day5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_6/006CP2744_day6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_7/006CP2744_day7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_8/006CP2744_day8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Documentation/day_9/006CP2744.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../t1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../t2.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userservice/src/main/java/com/Microservices/userservice/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userservice/src/main/java/com/Microservices/userservice/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userservice/src/main/java/com/Microservices/userservice/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userservice/src/main/java/com/Microservices/userservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Documentation/006CP2744_day27.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Documentation/006CP2744_day27.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../userservice/src/main/java/com/Microservices/userservice/UserserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../userservice/src/main/java/com/Microservices/userservice/UserserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../userservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../userservice/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,31 +28,31 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3IDHEYhcZKLtYqfZIOjAEJVFcRT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/NarayanaR/OneDrive - IBM/Desktop/Java/Program files/2108/MicroServices",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/NarayanaR/OneDrive - IBM/Desktop/Java/Program files/2108/MicroServices&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="demo" />
