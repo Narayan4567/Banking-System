@@ -1,0 +1,9 @@
+---
+- name: Install IIS on Windows
+  hosts: web
+
+  tasks:
+    - name: Ensure IIS is installed
+      win_feature:
+        name: Web-Server
+        state: present

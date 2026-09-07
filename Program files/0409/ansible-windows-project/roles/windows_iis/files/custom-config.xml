@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <appSettings>
+        <add key="ApplicationName" value="CorporatePortal"/>
+        <add key="Environment" value="UAT"/>
+        <add key="LoggingEnabled" value="true"/>
+    </appSettings>
+</configuration>
