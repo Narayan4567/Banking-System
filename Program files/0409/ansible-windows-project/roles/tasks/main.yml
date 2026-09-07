@@ -1,0 +1,35 @@
+---
+- name: Install IIS Web Server
+  win_feature:
+    name: Web-Server
+    state: present
+    include_management_tools: yes
+
+- name: Create application directory
+  win_file:
+    path: C:\inetpub\CorporatePortal
+    state: directory
+
+- name: Deploy custom homepage
+  win_template:
+    src: index.html.j2
+    dest: C:\inetpub\CorporatePortal\index.html
+  notify: Restart IIS
+
+- name: Copy custom configuration file
+  win_copy:
+    src: custom-config.xml
+    dest: C:\inetpub\CorporatePortal\custom-config.xml
+
+- name: Create IIS Application Pool
+  win_iis_webapppool:
+    name: "{{ app_pool_name }}"
+    state: started
+
+- name: Create IIS Website
+  win_iis_website:
+    name: "{{ website_name }}"
+    state: started
+    port: "{{ website_port }}"
+    physical_path: C:\inetpub\CorporatePortal
+    application_pool: "{{ app_pool_name }}"

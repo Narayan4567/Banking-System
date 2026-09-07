@@ -1,0 +1,14 @@
+---
+homepage_title: "Corporate Employee Portal"
+
+homepage_message: "This IIS server was provisioned and configured using Ansible Automation."
+
+website_name: "CorporatePortal"
+
+website_port: 80
+
+app_pool_name: "CorporatePortalPool"
+
+environment: "UAT"
+
+owner: "Narayana R"

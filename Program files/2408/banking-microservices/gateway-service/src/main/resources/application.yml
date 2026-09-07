@@ -1,0 +1,58 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway-service
+  # Redis Configuration
+  redis:
+    host: localhost
+    port: 6379
+  cloud:
+    gateway:
+      routes:
+        # Account Service Route
+        - id: account_route
+          uri: http://localhost:8082
+          predicates:
+            - Path=/account/**
+          filters:
+            # Rate Limiting for Account Service
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 5      # 5 requests per second
+                redis-rate-limiter.burstCapacity: 10     # Max 10 requests in burst
+                key-resolver: "#{@userKeyResolver}"      # Use our custom resolver
+            # Circuit Breaker
+            - name: CircuitBreaker
+              args:
+                name: accountCB
+                fallbackUri: forward:/fallback/account
+        # Transaction Service Route
+        - id: transaction_route
+          uri: http://localhost:8083
+          predicates:
+            - Path=/transaction/**
+          filters:
+            # Rate Limiting for Transaction Service
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 3      # 3 requests per second
+                redis-rate-limiter.burstCapacity: 6      # Max 6 requests in burst
+                key-resolver: "#{@userKeyResolver}"
+            # Circuit Breaker
+            - name: CircuitBreaker
+              args:
+                name: transactionCB
+                fallbackUri: forward:/fallback/transaction
+        # Dashboard Route (Aggregation)
+        - id: dashboard_route
+          uri: http://localhost:8080
+          predicates:
+            - Path=/dashboard/**
+          filters:
+            # Rate Limiting for Dashboard
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1      # 1 request per second
+                redis-rate-limiter.burstCapacity: 2      # Max 2 requests in burst
+                key-resolver: "#{@userKeyResolver}"
